@@ -21,20 +21,38 @@
         <div class="row">
             <?php
             class Prodotto {
+                // proprietà che hanno tutti              
                 public $titolo;
                 public $prezzo;
-                public $categoria;
-                public $tipo_articolo;
                 public $immagine;
-                    // costrutti
-                public function __construct($titolo, $prezzo, $categoria, $tipo_articolo, $immagine){
+
+                // costrutti
+                public function __construct($titolo, $prezzo, $immagine){
                     $this ->titolo =  $titolo;
                     $this ->prezzo =  $prezzo;
-                    $this ->categoria =  $categoria;
-                    $this ->tipo_articolo =  $tipo_articolo;
                     $this ->immagine =  $immagine;
                 }
+            
+            // metodo delle sottoclassi
+            public function getCategoria(){
+                return "generico";
             }
+            public function getTipo(){
+                return "generico";
+            }
+        }
+                //sottoclassi cani e gatti
+               class Cane extends Prodotto{
+                public function getCategoria(){
+                    return "Cane"
+                }
+               }
+               class Gatto extends Prodotto{
+                public function getCategoria(){
+                    return "Gatto"
+                }
+               }
+               
             ?>
         </div>
     </div>    
