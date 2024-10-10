@@ -51,12 +51,12 @@
                 public function getCategoria(){
                     return "Gatto";
                 }
-               
+            }
                 //sottoclassi per il tipo di articolo
-                
+
                 class Cibo extends Prodotto{
                     public function getTipo(){
-                        return "cibo";
+                        return "Cibo";
                     }
                 }
                 class Gioco extends Prodotto{
@@ -69,7 +69,40 @@
                         return "Cuccia";
                     }
                 }
-                //
+                // sottoclassi per cibo divisi per categoria (cane e gatto)
+                class CiboCane extends Cibo{
+                    public function getCategoria(){
+                        return "Cane";
+                    }
+                }
+                class CiboGatto extends Cibo{
+                    public function getCategoria(){
+                        return "Gatto";
+                    }
+                }
+                // sottoclassi per i giochi divisi per categoria (cane e gatto)
+                class giocoCane extends Gioco{
+                    public function getCategoria(){
+                        return "Cane";
+                    }
+                }
+                class GiocoGatto extends Gioco{
+                    public function getCategoria(){
+                        return "gatto";
+                    }
+                }
+                // sottoclassi per i giochi divisi per categoria (cane e gatto)
+                class CucciaCane extends Cuccia{
+                    public function getCategoria(){
+                        return "Cane";
+                    }
+                }
+                class CucciaGatto extends Cuccia{
+                    public function getCategoria(){
+                        return "gatto";
+                    }
+                }
+                
             ?>
         </div>
     </div>    
