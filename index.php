@@ -28,9 +28,21 @@
 
                 // costrutti
                 public function __construct($titolo, $prezzo, $immagine){
-                    $this ->titolo =  $titolo;
-                    $this ->prezzo =  $prezzo;
-                    $this ->immagine =  $immagine;
+                    $this->titolo =  $titolo;
+                    $this->prezzo =  $prezzo;
+                    $this->immagine =  $immagine;
+                }
+
+                // metodo per stampare le card dei prodotti
+                public function stampa() {
+                    echo "<div class='card m-1 p-1 w-25'>";
+                    echo "<h5 class='card-title'>{$this->titolo}</h5>";
+                    echo "<img src='{$this->immagine}' alt='{$this->titolo}'>";
+                    echo "<p class='card-text'> prezzo:{$this->prezzo} euro</p>";
+                    echo "<p class='card-text'><strong>Categoria: </strong>" . $this->getCategoria() . "</p>";
+                    echo "<p class='card-text'><strong>Tipo: </strong>" . $this->getTipo() . "</p>";
+                    echo "<button> compra </button>";
+                    echo "</div>";
                 }
             
             // metodo delle sottoclassi
@@ -102,11 +114,15 @@
                         return "gatto";
                     }
                 }
-                
+
                 //Prodotti
-                $prodotto1 = new CiboCane("Cibo per cani", 15,"https://www.purina.com/sites/g/files/auxxlc196/files/styles/social_share_large/public/purina-dog-chow-dry-dog-food-healthy-weight_0.jpg" );
-                $prodotto2 = new GiocoGatto("Gioco per gatti", 5,"https://cdn.shopify.com/s/files/1/1061/1924/products/CAT_EMOJI_WITH_TEARS_OF_JOY_1024x1024.png" );
-                $prodotto3 = new CucciaCane("Cuccia per cani", 50,"https://www.ikea.com/us/en/images/products/lurvig-pet-bed-black__0710160_pe727389_s5.jpg" );
+                $prodotto1 = new CiboCane("Cibo per cani", 15,"img/cibo per cani.jpeg" );
+                $prodotto2 = new GiocoGatto("Gioco per gatti", 5,"img/gioco per gatti.jpg" );
+                $prodotto3 = new CucciaCane("Cuccia per cani", 50,"img/cuccia per cani.jpg" );
+                //stampa
+                $prodotto1 -> stampa();
+                $prodotto2 -> stampa();
+                $prodotto3 -> stampa();
             ?>
         </div>
     </div>    
