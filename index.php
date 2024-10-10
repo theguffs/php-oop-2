@@ -22,9 +22,9 @@
             <?php
             class Prodotto {
                 // proprietà che hanno tutti              
-                public $titolo;
-                public $prezzo;
-                public $immagine;
+                public $titolo; //stringa
+                public $prezzo; //intero
+                public $immagine; //stringa
 
                 // costrutti
                 public function __construct($titolo, $prezzo, $immagine){
@@ -103,6 +103,10 @@
                     }
                 }
                 
+                //Prodotti
+                $prodotto1 = new CiboCane("Cibo per cani", 15,"https://www.purina.com/sites/g/files/auxxlc196/files/styles/social_share_large/public/purina-dog-chow-dry-dog-food-healthy-weight_0.jpg" );
+                $prodotto2 = new GiocoGatto("Gioco per gatti", 5,"https://cdn.shopify.com/s/files/1/1061/1924/products/CAT_EMOJI_WITH_TEARS_OF_JOY_1024x1024.png" );
+                $prodotto3 = new CucciaCane("Cuccia per cani", 50,"https://www.ikea.com/us/en/images/products/lurvig-pet-bed-black__0710160_pe727389_s5.jpg" );
             ?>
         </div>
     </div>    
