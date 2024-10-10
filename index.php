@@ -44,15 +44,32 @@
                 //sottoclassi cani e gatti
                class Cane extends Prodotto{
                 public function getCategoria(){
-                    return "Cane"
+                    return "Cane";
                 }
                }
                class Gatto extends Prodotto{
                 public function getCategoria(){
-                    return "Gatto"
+                    return "Gatto";
                 }
-               }
                
+                //sottoclassi per il tipo di articolo
+                
+                class Cibo extends Prodotto{
+                    public function getTipo(){
+                        return "cibo";
+                    }
+                }
+                class Gioco extends Prodotto{
+                    public function getTipo(){
+                        return "Gioco";
+                    }
+                }
+                class Cuccia extends Prodotto{
+                    public function getTipo(){
+                        return "Cuccia";
+                    }
+                }
+                //
             ?>
         </div>
     </div>    
